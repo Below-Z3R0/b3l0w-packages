@@ -14,6 +14,25 @@ Server = https://below-z3r0.github.io/b3l0w-packages/$arch
 
 La clave pública está en [`keys/b3l0w.asc`](keys/b3l0w.asc).
 
+```
+Fingerprint: 9AE2 C00A D3A9 A647 06A4  335C C6E1 D74A 0783 3042
+Clave:       9AE2C00AD3A9A64706A4335CC6E1D74A07833042
+Vence:       2031-11-05
+UID:         b3l0w packages <paquetes@b3l0w.local>
+```
+
+Importar y confiar:
+
+```bash
+curl -fsSLO https://below-z3r0.github.io/b3l0w-packages/keys/b3l0w.asc
+sudo pacman-key --add b3l0w.asc
+sudo pacman-key --lsign-key 9AE2C00AD3A9A64706A4335CC6E1D74A07833042
+```
+
+Verificá el fingerprint contra una fuente independiente antes de
+firmar la clave. Es lo único que impide que un repo comprometido
+reemplace la clave junto con los paquetes.
+
 ## Estructura
 
 ```
